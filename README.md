@@ -250,3 +250,33 @@ This project has accomplished the following core functionalities and results:
 - Codebase is well-structured and extensible, supporting further development for more metal combinations, different potentials, and new simulation tasks.
 
 **In summary, this project enables automated structure generation, ML potential-driven optimization and analysis, batch comparison, and visualization for high-entropy Prussian blue analogues, with strong scientific grounding and extensibility—making it a powerful tool for modern materials simulation and high-throughput screening.**
+
+## Output Files and Their Descriptions
+
+This project generates a variety of output files during structure generation, optimization, and analysis. Below is a detailed description of each output type:
+
+### 1. Structure Files (`.cif`)
+- **`initial_{metal}_hepba.cif`**: The initial (unrelaxed) structure of the HEPBA supercell for each metal (e.g., `initial_Fe_hepba.cif`).
+- **`optimized_{metal}_hepba.cif`**: The optimized (relaxed) structure after energy minimization for each metal (e.g., `optimized_Cu_hepba.cif`).
+- **Usage**: These files can be visualized and analyzed using crystallographic software such as VESTA, OVITO, or ASE.
+
+### 2. Analysis Results (`.json`)
+- **`hepba_analysis_results_{metal}.json`**: Contains detailed property data for each metal's HEPBA structure, including:
+  - Initial and optimized energy
+  - Volume and density
+  - Average bond lengths (M-N, C-N, etc.)
+  - Other structural and energetic properties
+- **Usage**: Useful for quantitative comparison, further data analysis, or integration into reports and publications.
+
+### 3. Optimization Trajectory Plots (`.png`)
+- **`optimization_{metal}_trajectory.png`**: Plots showing the evolution of energy and maximum force during the structure optimization process for each metal.
+- **Usage**: Helps assess the convergence and stability of the optimization process.
+
+### 4. Comparison Plots (`metal_comparison.png`)
+- **`metal_comparison.png`**: A summary figure comparing key properties (energy, density, bond lengths, etc.) across all studied metals in a single view.
+- **Usage**: Facilitates visual comparison and highlights trends or differences between different HEPBA compositions.
+
+### 5. Other Data Files
+- **Trajectory files (`.h5`, `.h5md`, `.hdf5`, `.traj`)**: If molecular dynamics or batch simulations are performed, these files store atomic trajectories and can be analyzed with ASE or TorchSim tools.
+
+**In summary, the output files provide comprehensive structural, energetic, and comparative information for high-entropy Prussian blue analogues, supporting both in-depth analysis and publication-quality visualization.**
